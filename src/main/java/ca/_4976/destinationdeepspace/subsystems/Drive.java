@@ -13,9 +13,9 @@ import static com.ctre.phoenix.motorcontrol.ControlMode.PercentOutput;
 public class Drive extends Subsystem {
     
     NetworkTable drive = NetworkTableInstance.getDefault().getTable("Drive");
-    
+
     @Override
     protected void initDefaultCommand() {
-        setDefaultCommand();
+        setDefaultCommand(new DriveWithJoystick());
     }
 }
